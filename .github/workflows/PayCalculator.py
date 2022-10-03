@@ -1,36 +1,45 @@
-# This is a basic workflow to help you get started with Actions
+#my pay-rate calculator
 
-name: CI
+print("Hello there, welcome to our pay calculator! \n Please enter your data below:")
 
-# Controls when the workflow will run
-on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+#Ask for user data.
+Hours = input("Enter Hours: ")
+Rate = input('Enter Rate: ')
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+#Convert to integer and calculate
+Calc = int(Hours) * int(Rate)
+Gum = (Calc) * 5
+Ram = (Gum) * 4
+Sam = (Ram) * 12
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+#Check for overtime or regular payment
+if Calc > 1000:
+	print("Overtime")
+else:
+	print("Regular")
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+#Calculation result
+print("Your pay is:", Calc, "dollars a day,")
+print(Gum, "dollars a week,")
+print(Ram, "dollars a month, AND")
+print(Sam, "dollars a year!" "\n CONGRATULATIONS!🌟")
+print("Thank you for working with us!")
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+#Ask for user input
+clit= input('Enter a room number: ')
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+try:
+	swill =int (clit)
+except:
+	swill= -1
+	
+	
+if swill > 0:
+	print('Thank you for your data, we will get back to you.')
+else:
+	print('Not a number')
+	print('Please insert a number.')
+	Sun = input('Enter room number: ')
+	
+	
+	print("Thanks for your data, we will get back to you.")
